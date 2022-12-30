@@ -169,19 +169,7 @@ foreach ($products as $product){
                             <h5><?='$'.$product['price']-($product['price']*$product['discount']) ?></h5><h6 class="text-muted ml-2"><del><?='$'.$product['price']?></del></h6>
                         </div>
                         <div class="d-flex align-items-center justify-content-center mb-1">
-                            <?php
-                    for ($i = 1; $i<=4; $i++) {
-                            if ($i<$product['rating']||$i==$product['rating']) echo'<small class="fa fa-star text-primary mr-1"></small>';
-                            if ($i==$product['rating']-.5) echo'<small class="fa fa-star-half text-primary mr-1"></small>';
-                            if ($product['rating'] == .5 && $i == 1)
-                            echo '<small class="fa fa-star-half text-primary mr-1"></small>';
-                            if ($i>=$product['rating']) echo'<small class="far fa-star text-primary mr-1"></small>';
-    
-                        if ($product['rating'] == 5 && $i == 4)
-                            echo '<small class="fa fa-star text-primary mr-1"></small>';
-                    }
-                    if ($product['rating']==0) echo'<small class="far fa-star text-primary mr-1"></small>';
-                            ?>
+                       <?php require('./functions/rate.php')?>
                             <small><?=$product['rating_count']?></small>
                         </div>
                     </div>
@@ -249,19 +237,7 @@ foreach ($products as $product){
                             <h5><?='$'.$product['price']-($product['price']*$product['discount']) ?></h5><h6 class="text-muted ml-2"><del><?='$'.$product['price']?></del></h6>
                         </div>
                         <div class="d-flex align-items-center justify-content-center mb-1">
-                            <?php
-                    for ($i = 1; $i<=4; $i++) {
-                            if ($i<$product['rating']||$i==$product['rating']) echo'<small class="fa fa-star text-primary mr-1"></small>';
-                            if ($i==$product['rating']-.5) echo'<small class="fa fa-star-half text-primary mr-1"></small>';
-                            if ($product['rating'] == .5 && $i == 1)
-                            echo '<small class="fa fa-star-half text-primary mr-1"></small>';
-                            if ($i>=$product['rating']) echo'<small class="far fa-star text-primary mr-1"></small>';
-    
-                        if ($product['rating'] == 5 && $i == 4)
-                            echo '<small class="fa fa-star text-primary mr-1"></small>';
-                    }
-                    if ($product['rating']==0) echo'<small class="far fa-star text-primary mr-1"></small>';
-                            ?>
+                        <?php require('./functions/rate.php')?>
                             <small><?=$product['rating_count']?></small>
                         </div>
                     </div>
